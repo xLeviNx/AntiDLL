@@ -75,7 +75,7 @@ jobs:
           version: '1.10.x'
           
       - name: Checking out SourceMod
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: alliedmodders/sourcemod
           ref: ${{ matrix.branch }}
@@ -83,14 +83,14 @@ jobs:
           submodules: recursive
 
       - name: Checking out MM:Source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: alliedmodders/metamod-source
           ref: ${{ matrix.branch }}
           path: metamod-${{ matrix.sm_version }}
 
       - name: Checking out AMBuild
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: alliedmodders/ambuild
           path: ambuild
@@ -103,28 +103,28 @@ jobs:
         run: python setup.py install
 
       - name: Checking out hl2sdk-css
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: alliedmodders/hl2sdk
           ref: css
           path: hl2sdk-css
 
       - name: Checking out hl2sdk-csgo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: alliedmodders/hl2sdk
           ref: csgo
           path: hl2sdk-csgo
 
       - name: Checking out hl2sdk-episode1
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: alliedmodders/hl2sdk
           ref: episode1
           path: hl2sdk-episode1
 
       - name: Checking out own repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: AntiDLL
 
